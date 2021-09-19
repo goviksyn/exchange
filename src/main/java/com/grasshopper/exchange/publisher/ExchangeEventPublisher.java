@@ -21,10 +21,8 @@ public class ExchangeEventPublisher {
     private ApplicationEventPublisher publisher;
 
     public void publishEvent() throws FileNotFoundException {
-        //Read file line by line , create even object and publish
         File file = ResourceUtils.getFile("classpath:l3_data_v3.csv");
         try (Stream<String> stream = Files.lines(file.toPath())) {
-            //stream.skip(1).map(line -> eventParser.parse(line)).forEach(publisher::publishEvent);
             stream.skip(1).forEach(publisher::publishEvent);
         } catch (IOException e) {
             e.printStackTrace();
