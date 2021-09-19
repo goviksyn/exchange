@@ -1,10 +1,6 @@
 package com.grasshopper.exchange.event;
 
 
-import com.grasshopper.exchange.common.Side;
-
-import java.util.Date;
-
 public class Event {
     long seq_num;
     long add_order_id;

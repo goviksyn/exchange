@@ -2,7 +2,6 @@ package com.grasshopper.exchange.order;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Stream;
 
 
 public class OrderHolder {

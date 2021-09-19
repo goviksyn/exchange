@@ -2,16 +2,10 @@ package com.grasshopper.exchange.event;
 
 import org.springframework.stereotype.Component;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
 @Component
 public class EventParser {
 
-    public Event parse(String event)  {
+    public Event parse(String event) {
         String[] eventArray = event.split(",");
         Event eventObj = new Event();
         eventObj.setSeq_num(getLong(eventArray[0]));
@@ -40,6 +34,7 @@ public class EventParser {
     private Long getLong(String val) {
         return val.isEmpty() ? 0l : Long.parseLong(val);
     }
+
     private Double getDouble(String val) {
         return val.isEmpty() ? 0.0 : Double.parseDouble(val);
     }

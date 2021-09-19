@@ -29,7 +29,7 @@ public class EventProcessor {
             orderBook.delete(order);
         }else if(event.getTrade_order_id() >1){
             Order tmp = new Order(event.getTrade_order_id(), Side.valueOf(event.getTrade_side()),event.getTrade_price(),event.getTrade_qty(),event.getTime(),event.getSeq_num());
-            //Do nothing..
+            //Do nothing..or not sure what to do..
         }else{
             System.out.println("Unknow event, ignoring...");
         }

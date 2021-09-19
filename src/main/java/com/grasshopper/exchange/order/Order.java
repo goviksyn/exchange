@@ -2,8 +2,6 @@ package com.grasshopper.exchange.order;
 
 import com.grasshopper.exchange.common.Side;
 
-import java.util.Date;
-
 public class Order {
     private long orderId;
     private Side side;
